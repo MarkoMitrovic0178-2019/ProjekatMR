@@ -33,12 +33,12 @@ export class LogInPage implements OnInit {
             error: async (errRes) => {
               let message = 'Incorrect email or password';
 
-              // const code = errRes.error.error.message;
-              // if (code === 'EMAIL_NOT_FOUND') {
-              //     message = 'Email address could not be found.';
-              // } else if (code === 'INVALID_PASSWORD') {
-              //     message = 'Incorrect password';
-              // }
+              const code = errRes.error.error.message;
+              if (code === 'EMAIL_NOT_FOUND') {
+                  message = 'Email address could not be found.';
+              } else if (code === 'INVALID_PASSWORD') {
+                  message = 'Incorrect password';
+              }
 
               const alert = await this.alertCtrl.create(
                 {
