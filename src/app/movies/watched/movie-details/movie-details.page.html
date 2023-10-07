@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+<ion-buttons>
+  <ion-back-button default-href="/movies/tabs/watched"></ion-back-button>
+</ion-buttons>
+
+    <ion-title>movie-details</ion-title>
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="tertiary" (click)="onEditMovie()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+      <ion-button slot="primary" (click)="onDeleteMovie()">
+        <ion-icon name="trash" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" >
+
+  <div class="ion-text-center" *ngIf="isLoading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+<div class="center-container">
+  <ion-card *ngIf="!isLoading" >
+    <div class="image-container">
+      <img [src]="movie.imageUrl" />
+      <ion-card-header>
+        <ion-card-title >
+          {{movie.name}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{movie.director}}
+      </ion-card-content>
+    </div>
+    <ion-card-content>
+    <i>{{movie.critique}}</i>
+  </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
