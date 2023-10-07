@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+            <ion-menu-button>
+            </ion-menu-button>
+          </ion-buttons>
+    <ion-title>watched</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <app-movie-element *ngFor="let movie of movies" [movie]="movie"
+                       [routerLink]="['/movies/tabs/watched', movie.id]">
+    </app-movie-element>
+
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="openModal()" >
+    <ion-fab-button color="tertiary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
