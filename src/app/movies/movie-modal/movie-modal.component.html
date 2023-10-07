@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Movie</ion-title>
+    <ion-buttons slot="end" (click)="onCancel()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center" >
+  <form (ngSubmit)="onAddMovie()" #f="ngForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Director</ion-label>
+            <ion-input
+              type="text"
+              [ngModel]="director"
+              name="director"
+              required
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input
+              type="text"
+              [ngModel]="name"
+              name="name"
+              required
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">ImageUrl</ion-label>
+            <ion-textarea
+              type="text"
+              [ngModel]="imageUrl"
+              name="imageUrl"
+              required
+            ></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Critique</ion-label>
+            <ion-textarea
+              type="text"
+              rows="6"
+              [ngModel]="critique"
+              name="critique"
+              required
+            ></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button
+            type="submit"
+            color="primary"
+            expand="block"
+            [disabled]="!f.valid"
+          >
+            Add it
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
