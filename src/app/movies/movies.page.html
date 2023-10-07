@@ -1,0 +1,26 @@
+<!--<ion-header [translucent]="true">-->
+<!--  <ion-toolbar>-->
+<!--
+    <ion-title>movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<<ion-content [fullscreen]="true">-->
+<!--  <ion-header collapse="condense">-->
+<!--    <ion-toolbar>-->
+<!--      <ion-title size="large">movies</ion-title>-->
+<!--    </ion-toolbar>-->
+<!--  </ion-header></ion-content>-->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="watched">
+        <ion-icon name="checkmark-outline"></ion-icon>
+        Movies Watched
+      </ion-tab-button>
+      <ion-tab-button tab="to-watch">
+        <ion-icon name="eye"></ion-icon>
+        Movies to watch
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
