@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { WatchedPageRoutingModule } from './watched-routing.module';
 
 import { WatchedPage } from './watched.page';
-import {MovieElementComponent} from "../movie-element/movie-element.component";
+import {MovieElementComponent} from "./movie-element/movie-element.component";
 import {MovieModalComponent} from "../movie-modal/movie-modal.component";
 
 

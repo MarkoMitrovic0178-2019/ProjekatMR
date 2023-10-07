@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MovieToWatch} from "../movies-to-watch.model";
+import {MovieToWatch} from "../../movies-to-watch.model";
 import {AlertController, LoadingController, ModalController} from "@ionic/angular";
-import {MoviesToWatchService} from "../movies-to-watch.service";
-import {MoviesToWatchModalComponent} from "../movies-to-watch-modal/movies-to-watch-modal.component";
-import {MoviesService} from "../movies.service";
-import {CritiqueModalComponent} from "../critique-modal/critique-modal.component";
+import {MoviesToWatchService} from "../../movies-to-watch.service";
+import {MoviesToWatchModalComponent} from "../../movies-to-watch-modal/movies-to-watch-modal.component";
+import {MoviesService} from "../../movies.service";
+import {CritiqueModalComponent} from "../../critique-modal/critique-modal.component";
 
 @Component({
   selector: 'app-movies-to-watch-element',
