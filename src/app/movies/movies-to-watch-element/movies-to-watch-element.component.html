@@ -1,0 +1,21 @@
+<ion-item-sliding>
+  <ion-item>
+    <ion-avatar slot="start">
+      <ion-img [src]="movieToWatch.imageUrl"></ion-img>
+    </ion-avatar>
+    <ion-label>{{movieToWatch.name}}</ion-label>
+    <ion-label slot="end">{{movieToWatch.director}}</ion-label>
+  </ion-item>
+  <ion-item-options side="start">
+    <ion-item-option  (click)="onEditMovieToWatch()">
+      <ion-icon slot="bottom" name="pencil"></ion-icon>
+      Edit
+    </ion-item-option>
+  </ion-item-options>
+  <ion-item-options side="end">
+    <ion-item-option color="danger" (click)="onDeleteMovieToWatch()">
+      <ion-icon slot="bottom" name="trash" ></ion-icon>
+      Delete
+    </ion-item-option>
+  </ion-item-options>
+</ion-item-sliding>
