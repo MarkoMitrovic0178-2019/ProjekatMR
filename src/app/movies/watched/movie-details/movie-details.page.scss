@@ -1,0 +1,23 @@
+ion-card {
+  --background: var(--ion-color-tertiary);
+  width: auto;
+  max-width: 600px;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.image-container{
+  text-align: center;
+  max-height: 100%;
+  overflow: hidden;
+}
+.image-container img{
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+
+}
